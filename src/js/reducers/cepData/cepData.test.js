@@ -28,14 +28,4 @@ describe('UPDATE_CEP_DATA', () => {
     }
     expect(cepData(initialState, action)).to.be.eql(endState);
   });
-
-  // it('should add a new item again', () => {
-  //   const initialState = deepFreeze([{ content: 'Example item', status: 'to-do' }]);
-  //   const action = deepFreeze({ type: 'ADD_ITEM', content: 'Another example item' });
-  //   const endState = [
-  //     { content: 'Example item', status: 'to-do' },
-  //     { content: 'Another example item', status: 'to-do' }
-  //   ];
-  //   expect(todos(initialState, action)).to.be.eql(endState);
-  // });
 });

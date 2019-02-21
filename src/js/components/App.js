@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { updateCepData } from '../reducers/cepData/action-creators';
-import axios from 'axios';
+// import axios from 'axios';
 
 const mapStateToProps = (state) => ({
   cepData: state.cepData
@@ -16,11 +16,15 @@ class App extends Component {
   constructor() {
     super();
 
-    this.handleSubmit = async (e) => {
+    // this.handleSubmit = async (e) => {
+    //   e.preventDefault();
+    //   // this.props.updateCepData(e.target.cep.value);
+    //   const req = await axios.get(`http://apps.widenet.com.br/busca-cep/api/cep.json?code=${e.target.cep.value}`);
+    //   this.props.updateCepData(req.data);
+    // }
+    this.handleSubmit = (e) => {
       e.preventDefault();
-      // this.props.updateCepData(e.target.cep.value);
-      const req = await axios.get(`http://apps.widenet.com.br/busca-cep/api/cep.json?code=${e.target.cep.value}`);
-      this.props.updateCepData(req.data);
+      this.props.updateCepData(e.target.cep.value);
     }
   }
 
