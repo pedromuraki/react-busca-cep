@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
 /* Reducers */
-import todos from './todos';
+import cepData from './cepData';
 
 export const combinedReducers = combineReducers({
-  todos
+  cepData
 });
 
 export default combinedReducers;
