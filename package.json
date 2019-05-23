@@ -4,11 +4,11 @@
   "description": "react boilerplate",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open --host 0.0.0.0",
+    "start": "webpack-dev-server --mode development --open --host 0.0.0.0",
     "build": "NODE_ENV=production webpack --mode production --progress",
-    "start": "serve -s build",
-    "heroku-postbuild": "npm run build",
-    "test:watch": "jest --coverage --watch --collectCoverageFrom=src/js/reducers/*.js"
+    "test:watch": "jest --coverage --watch --collectCoverageFrom=src/js/reducers/*.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",

@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const updateCepData = (code) => {
   return async (dispatch, getState) => {
-    const req = await axios.get(`http://apps.widenet.com.br/busca-cep/api/cep.json?code=${code}`);
+    const req = await axios.get(`https://apps.widenet.com.br/busca-cep/api/cep.json?code=${code}`);
 
     dispatch({
       type: UPDATE_CEP_DATA,
